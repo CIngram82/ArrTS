@@ -345,7 +345,6 @@ GameObject:
   m_Component:
   - component: {fileID: 733627545}
   - component: {fileID: 733627544}
-  - component: {fileID: 733627546}
   m_Layer: 0
   m_Name: NetworkManager
   m_TagString: Untagged
@@ -361,7 +360,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 733627543}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -822479833, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
+  m_Script: {fileID: 11500000, guid: 29d0dadef3f5fea418af8510e42f58ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_NetworkPort: 7777
@@ -377,8 +376,8 @@ MonoBehaviour:
     type: 2}
   m_AutoCreatePlayer: 1
   m_PlayerSpawnMethod: 0
-  m_OfflineScene: Game
-  m_OnlineScene: Game
+  m_OfflineScene: 
+  m_OnlineScene: 
   m_SpawnPrefabs: []
   m_CustomConfig: 0
   m_MaxConnections: 4
@@ -448,17 +447,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &733627546
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 733627543}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29d0dadef3f5fea418af8510e42f58ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &968465791
 GameObject:
   m_ObjectHideFlags: 0
@@ -772,7 +760,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 733627546}
+      - m_Target: {fileID: 733627544}
         m_MethodName: MyStartHost
         m_Mode: 1
         m_Arguments:
