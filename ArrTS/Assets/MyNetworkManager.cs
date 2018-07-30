@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.Networking;
 
 public class MyNetworkManager : NetworkManager {
-
     public void MyStartHost()
     {
         StartHost();
@@ -21,11 +20,18 @@ public class MyNetworkManager : NetworkManager {
     {
         base.OnStartClient(myClient);
         Debug.Log(Time.realtimeSinceStartup + " : Start Client Request");
+        InvokeRepeating("PrintDots", 0f,.5f);
     }
 
     public override void OnClientConnect(NetworkConnection conn)
     {
         base.OnClientConnect(conn);
         Debug.Log(Time.realtimeSinceStartup + " : Client Connected to :" + conn.address);
+        CancelInvoke();
     }
+    private void PrintDots()
+    {
+         Debug.Log(".");
+    }
+
 }
