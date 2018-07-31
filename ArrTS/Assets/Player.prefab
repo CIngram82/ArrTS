@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 114367809016608088}
   - component: {fileID: 114315621770726450}
   m_Layer: 9
-  m_Name: RollerBall
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
