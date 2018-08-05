@@ -5,7 +5,7 @@ using UnityEngine.Networking;
 
 namespace UnityStandardAssets.Vehicles.Ball
 {
-    public class BallUserControl : MonoBehaviour
+    public class BallUserControl : NetworkBehaviour
     {
         public NetworkManager networkManager;
         private Ball ball; // Reference to the ball controller.
@@ -40,6 +40,9 @@ namespace UnityStandardAssets.Vehicles.Ball
 
         private void Update()
         {
+            // Only local player gets control
+            if (!isLocalPlayer) return; 
+
             // Get the axis and jump input.
             
             float h = CrossPlatformInputManager.GetAxis("Horizontal");
